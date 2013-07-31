@@ -1028,6 +1028,7 @@
   .navbar-inverse .nav-collapse .nav > li > a:focus,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    color: $off_white;
     background-color: $accent-color2;
   }
   

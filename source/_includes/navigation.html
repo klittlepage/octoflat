@@ -18,4 +18,7 @@
     {% if site.email %}
     <li><a href="mailto:{{ site.email }}" title="Email"><i class="icon-envelope-alt social-navbar"></i></a></li>
     {% endif %}
+    {% if site.enable_rss %}
+    <li><a href="{{ site.subscribe_rss }}" title="RSS Feed"><i class="icon-rss-sign social-navbar"></i></a></li>
+    {% endif %}
 </ul>

@@ -202,7 +202,7 @@ h1 {
   font-weight: 900; 
   font-family: "Quicksand"; }
   .date-time{
-    font-size: 16px;
+    font-size: 15px;
     color: $accent-color2;
     font-weight: 500;
   }
@@ -647,17 +647,20 @@ h6 {
   background: $navbar-color;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
 .navbar-inverse .nav > li > a {
-  color: $accent-color3; 
+  color: $button-text-color;
+  background-color: $button-background-color;
   font-weight: 300; }
-.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
-  background-color: transparent;
-  color: $tertiary-color;
+.navbar-inverse .nav .active > a {
+  color: $button-text-color;
+  background-color: $button-background-color;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
 
-.navbar-inverse .nav .active > a:hover {
-    background-color: $accent-color1; }
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+    background-color: $button-active-background-color;
+    color: $button-active-text-color; }
 
 .navbar-unread {
   background-color: #e74c3c;
@@ -2621,11 +2624,29 @@ hr { display: block; height: 1px;
   float:right;
 }
 
+[class^="icon-"],
+[class*=" icon-"] {
+  color: $button-text-color;
+}
+
 .navbar-inverse .nav > li > a:hover,
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .dropdown-menu a:hover,
 .navbar-inverse .dropdown-menu a:focus {
-  background-color: $accent-color1;
+  color: $button-active-text-color;
+  background-color: $button-active-background-color;
+}
+
+.navbar-inverse .nav > li > a:hover > [class^="icon-"],
+.navbar-inverse .nav > li > a:hover > [class*=" icon-"],
+.navbar-inverse .nav > li > a:focus > [class^="icon-"],
+.navbar-inverse .nav > li > a:focus > [class*=" icon-"],
+.navbar-inverse .dropdown-menu a:hover > [class^="icon-"],
+.navbar-inverse .dropdown-menu a:hover[class*=" icon-"],
+.navbar-inverse .dropdown-menu a:focus > [class^="icon-"],
+.navbar-inverse .dropdown-menu a:focus > [class*=" icon-"]{
+  color: $button-active-text-color;
+  background-color: $button-active-background-color;
 }
 
 a > .badge {
@@ -2653,7 +2674,6 @@ a:hover > .badge {
 
   /* Safari and Chrome CSS here */
   .navbar-inverse .nav > li > a {
-  color: $accent-color3;
   font-weight: 400;
 }
 
