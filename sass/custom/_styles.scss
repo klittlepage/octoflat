@@ -6,19 +6,25 @@
 
 #about-jumbotron .container {
 	color: $off_white;
-	text-align: center
+	text-align: center;
 }
 
 #about-jumbotron .tagline {
 	color: $off_white;
-	text-align: center
+	text-align: center;
 }
 
 @media (max-width: 768px) {
 	#about-jumbotron {
-		margin-left: -25px;
-		margin-right: -25px;
-	}	
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	#about-jumbotron .container {
+		font-size: 90%;
+	}
+	#about-jumbotron .tagline {
+		font-size: 22px;
+	}
 }
 
 #about-container {
