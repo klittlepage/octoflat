@@ -29,6 +29,7 @@ MathJax.Hub.Config({
   	  </div>
   	</div>
   </div>
+  {% include header.html %}
   <div class="container" id="main">
     <div class="span12">
       <div class="row-fluid">
@@ -36,11 +37,13 @@ MathJax.Hub.Config({
           {{ content | expand_urls: root_url }}
         </div>
       </div>
+      {% unless page.omit_footer %}
       <div class="row-fluid">
         <footer class="footer-page" role="contentinfo">
           {% include footer.html %}
         </footer>
       </div>
+      {% endunless %}
     </div>
   </div>
   {% include after_footer.html %}
