@@ -2,6 +2,7 @@ $background_image: '../images/tokyo_background.jpg';
 
 #misapplied-jumbotron {
 	background: url($background_image);
+	font-size: 60px;
 	margin-bottom: 20px;
 }
 
@@ -16,13 +17,19 @@ $background_image: '../images/tokyo_background.jpg';
 }
 
 @media (max-width: 768px) {
+	.jumbotron {
+		font-size: 40px;
+	}
+
 	#misapplied-jumbotron {
 		margin-left: -20px;
 		margin-right: -20px;
 	}
+
 	#misapplied-jumbotron .container {
 		font-size: 90%;
 	}
+
 	#misapplied-jumbotron .tagline {
 		font-size: 22px;
 	}
@@ -32,4 +39,8 @@ $background_image: '../images/tokyo_background.jpg';
 	footer {
 		text-align: center;
 	}
+}
+
+.mathjax-block-wrapper {
+	overflow-x: auto;
 }
