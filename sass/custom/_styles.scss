@@ -4,6 +4,7 @@ $background_image: '../images/tokyo_background.jpg';
 	background: url($background_image);
 	font-size: 60px;
 	margin-bottom: 20px;
+	overflow-x: hidden;
 }
 
 #misapplied-jumbotron .container {
@@ -16,7 +17,7 @@ $background_image: '../images/tokyo_background.jpg';
 	text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.jumbotron {
 		font-size: 40px;
 	}
