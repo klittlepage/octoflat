@@ -11,11 +11,30 @@ $background_image: '../images/tokyo-background.jpg';
 	padding-left: 0px;
 }
 
+.navbar {
+	margin-bottom: 0px;
+	border-width: 0px;
+}
+
+.navbar-inner {
+	border-radius: 0px;
+}
+
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+	background-color: $button-active-background-color;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: $button-active-text-color;
+}
+
 #misapplied-jumbotron {
 	background: url($background_image);
 	font-size: 60px;
 	margin-bottom: 20px;
 	overflow-x: hidden;
+	line-height: 80px;
 }
 
 #misapplied-jumbotron .container {
