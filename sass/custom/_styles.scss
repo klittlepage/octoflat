@@ -20,6 +20,10 @@ $background_image: '../images/tokyo-background.jpg';
 	border-radius: 0px;
 }
 
+.navbar-inverse {
+	background-color: $navbar-color;
+}
+
 .navbar-inverse .navbar-toggle:hover, 
 .navbar-inverse .navbar-toggle:focus {
 	background-color: $button-active-background-color;
@@ -27,6 +31,15 @@ $background_image: '../images/tokyo-background.jpg';
 
 .navbar-inverse .navbar-toggle .icon-bar {
 	background-color: $button-active-text-color;
+}
+
+@media (max-width: 979px) {
+	.navbar-inverse .nav-collapse .nav > li > a:hover,
+	.navbar-inverse .nav-collapse .nav > li > a:focus,
+	.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+	.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+		color: $off_white;
+	}
 }
 
 #misapplied-jumbotron {
@@ -50,11 +63,6 @@ $background_image: '../images/tokyo-background.jpg';
 @media (max-width: 767px) {
 	.jumbotron {
 		font-size: 40px;
-	}
-
-	#misapplied-jumbotron {
-		margin-left: -20px;
-		margin-right: -20px;
 	}
 
 	#misapplied-jumbotron .container {
@@ -87,11 +95,28 @@ $background_image: '../images/tokyo-background.jpg';
 	}
 }
 
-@media (max-width: 979px) {
-	.navbar-inverse .nav-collapse .nav > li > a:hover,
-	.navbar-inverse .nav-collapse .nav > li > a:focus,
-	.navbar-inverse .nav-collapse .dropdown-menu a:hover,
-	.navbar-inverse .nav-collapse .dropdown-menu a:focus {
-		color: $off_white;
-	}
+img {
+	width: auto\9;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+.btn.btn-default.dropdown-toggle {
+	// background-color: #4e6d8d;
+	color: $bg-color;
+	background-color: $navbar-color;
+}
+
+.btn.btn-default.dropdown-toggle:active {
+	color: $bg-color;
+}
+
+.panel-body.vis-panel-body {
+	background-color: $bg-color;
+}
+
+.panel-heading.vis-panel-heading {
+	background-color: $bg-color;
 }

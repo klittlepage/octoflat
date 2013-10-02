@@ -2,19 +2,17 @@
 {% if index %}
   <div class="row">
     <div class="col-sm-2">
-		<h1 class="date-time">{% include post/date.html %}<i class="icon-calendar-empty"></i> {{ time }}</h5>
-          <div class="row">
-          {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
-          <a href="{% if index %}{{ site.url }}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          {% endif %}
-          </div>
-          {% if post.categories %}
-          <div class="row">
-          {% for category in post.categories %}
-          <a href="{{ category | category_link_for_name }}"><span class="badge">{{ category | titlecase }}</span></a>
-          {% endfor %}
-          </div>
-          {% endif %}
+		  <h1 class="date-time">{% include post/date.html %}<i class="icon-calendar-empty"></i> {{ time }}</h1>
+      {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
+      <a href="{% if index %}{{ site.url }}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+      {% endif %}
+      {% if post.categories %}
+      {% for category in post.categories %}
+      <a href="{{ category | category_link_for_name }}">
+        <span class="badge">{{ category | titlecase }}</span>
+      </a>
+      {% endfor %}
+      {% endif %}
     </div>
     <div class="col-sm-10">
       <h1 class="link"><a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a></h1>
