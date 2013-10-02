@@ -9,30 +9,30 @@ single: true
   <footer>
     <hr>
     {% if page.category or page.categories or page.sharing != false %}
-    <div class="row-fluid">
+    <div class="row">
       {% if page.category or page.categories %}
-      <div class="span6">
+      <div class="col-sm-6">
         <p class="meta">
         {% if updated %}{{ updated }}</br>{% else %}{% endif %}
         {% include post/categories.html %}
         </p>
       </div>
       {% unless page.sharing == false %}
-      <div class="span6 social-sharing">
+      <div class="col-sm-6 social-sharing">
         {% include post/sharing.html %}
       </div>
       {% endunless %}
       {% else %}
       {% unless page.sharing == false %}
-      <div class="span12">
+      <div class="col-sm-12">
         {% include post/sharing.html %}
       </div>
       {% endunless %}
       {% endif %}
     </div>
     {% endif %}
-    <div class="row-fluid">
-      <div class="span12">
+    <div class="row">
+      <div class="col-sm-12">
         <p class="meta">
           {% if page.previous.url %}
             <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
