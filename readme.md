@@ -82,6 +82,9 @@ $ cd your_octopress_dir/.themes/octoflat/sass/custom/
 Edit the _colors.scss file with your favorite text editor.
 Remove the commented out lines that are specified (line 3 and 18)
 
+## Modifying the navigation bar breakpoint:
+Recompile boostrap, setting @grid-float-breakpoint in variables.less
+
 ---------
 
 ### LinkedIn Link ###
