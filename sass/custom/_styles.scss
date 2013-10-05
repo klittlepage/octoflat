@@ -1,78 +1,5 @@
-$background_image: '../images/tokyo-background.jpg';
-
-.jumbotron {
-	font-weight: normal;
-	background-color: $off_white;
-	padding-left: 0px;
-	text-align: left;
-}
-
-.container .jumbotron {
-	padding-left: 0px;
-}
-
-.navbar {
-	margin-bottom: 0px;
-	border-width: 0px;
-}
-
-.navbar-inner {
-	border-radius: 0px;
-}
-
-.navbar-inverse {
-	background-color: $navbar-color;
-}
-
-.navbar-inverse .navbar-toggle:hover, 
-.navbar-inverse .navbar-toggle:focus {
-	background-color: $button-active-background-color;
-}
-
-.navbar-inverse .navbar-toggle .icon-bar {
-	background-color: $button-active-text-color;
-}
-
-@media (max-width: 979px) {
-	.navbar-inverse .nav-collapse .nav > li > a:hover,
-	.navbar-inverse .nav-collapse .nav > li > a:focus,
-	.navbar-inverse .nav-collapse .dropdown-menu a:hover,
-	.navbar-inverse .nav-collapse .dropdown-menu a:focus {
-		color: $off_white;
-	}
-}
-
-#misapplied-jumbotron {
-	background: url($background_image);
-	font-size: 60px;
-	margin-bottom: 20px;
-	overflow-x: hidden;
-	line-height: 80px;
-}
-
-#misapplied-jumbotron .container {
-	color: $off_white;
-	text-align: center;
-}
-
-#misapplied-jumbotron .tagline {
-	color: $off_white;
-	text-align: center;
-}
-
-@media (max-width: 767px) {
-	.jumbotron {
-		font-size: 40px;
-	}
-
-	#misapplied-jumbotron .container {
-		font-size: 90%;
-	}
-
-	#misapplied-jumbotron .tagline {
-		font-size: 22px;
-	}
-}
+@import "navbar";
+@import "jumbotron";
 
 @media (min-width: 768px) {
 	footer {
@@ -104,7 +31,6 @@ img {
 }
 
 .btn.btn-default.dropdown-toggle {
-	// background-color: #4e6d8d;
 	color: $bg-color;
 	background-color: $navbar-color;
 }
@@ -119,4 +45,9 @@ img {
 
 .panel-heading.vis-panel-heading {
 	background-color: $bg-color;
+}
+
+.background-color-caret {
+	border-top-color: $bg-color !important;
+	border-bottom-color: $bg-color !important;
 }

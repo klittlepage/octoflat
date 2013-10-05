@@ -23,11 +23,14 @@
   <link href="{{ root_url }}/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link href="{{ screen.css | asset_path }}" media="screen, projection" rel="stylesheet" type="text/css">
-  {% if page.custom_css %}
-    <link href="{{ page.custom_css | asset_path }}" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="{{ 'screen.css' | asset_path }}" media="screen, projection" rel="stylesheet" type="text/css">
+  {% if page.stylesheet %}
+  <link href="{{ page.url | asset_directory }}style.css" media="screen, projection" rel="stylesheet" type="text/css">
   {% endif %}
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+
   {% javascript misapplied_site %}
   {% include custom/head.html %}
   {% include google_analytics.html %}
