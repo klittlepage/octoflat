@@ -5,7 +5,7 @@
 	<script src="{{ page.url | asset_directory }}page.js" charset="utf-8"></script>
 {% endif %}
 
-<script type="text/x-mathjax-config">
+<script data-cfasync="false" type="text/x-mathjax-config">
 MathJax.Hub.Config({
   jax: ["input/TeX", "output/HTML-CSS"],
   tex2jax: {
@@ -18,5 +18,5 @@ MathJax.Hub.Config({
   "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
 });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script data-cfasync="false" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 {% include google_analytics.html %}
