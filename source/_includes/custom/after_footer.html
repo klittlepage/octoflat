@@ -14,6 +14,11 @@ MathJax.Hub.Config({
     processEscapes: true,
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
   },
+  TeX: {
+    Macros: {
+      E: "{\\mathbb{E}}"
+    }
+  },
   messageStyle: "none",
   "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
 });
