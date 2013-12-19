@@ -58,3 +58,7 @@ img {
 	border-top-color: $bg-color !important;
 	border-bottom-color: $bg-color !important;
 }
+
+.mathjax-block-wrapper > .MathJax_Display {
+	overflow-y: hidden;
+}
